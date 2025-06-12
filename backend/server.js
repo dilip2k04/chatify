@@ -48,7 +48,7 @@ const upload = multer({
 });
 
 // MongoDB Connection
-const MONGO_URI = 'mongodb://localhost:27017/whatschatdb';
+const MONGO_URI = 'mongodb+srv://dilip:Mongodbdilip@blog.slftveg.mongodb.net/';
 mongoose.connect(MONGO_URI)
   .then(() => console.log('MongoDB connected'))
   .catch(err => console.error('MongoDB connection error:', err));
