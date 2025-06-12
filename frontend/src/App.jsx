@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import io from 'socket.io-client';
 import axios from 'axios';
 
-const socket = io('http://localhost:5000');
+const socket = io('https://chatify-backend-sh82.onrender.com');
 
 function App() {
   const [phoneNumber, setPhoneNumber] = useState('');
