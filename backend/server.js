@@ -10,11 +10,17 @@ const fs = require('fs');
 
 const app = express();
 const server = http.createServer(app);
-const io = socketIo(server, { 
-  cors: { 
-    origin: process.env.FRONTEND_URL || 'http://localhost:5173',
-    methods: ['GET', 'POST']
-  } 
+// In your backend server setup (Node.js/Express)
+const io = socketIo(server, {
+  cors: {
+    origin: [
+      'http://localhost:5173', // Your local dev server
+      'https://chatify-48y2.onrender.com', // Your production frontend
+      'https://chatify-backend-sh82.onrender.com' // Your backend
+    ],
+    methods: ['GET', 'POST'],
+    credentials: true
+  }
 });
 
 // Middleware
