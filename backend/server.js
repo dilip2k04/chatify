@@ -48,7 +48,7 @@ const upload = multer({
 });
 
 // MongoDB Connection
-const MONGO_URI = 'mongodb+srv://dilip:Mongodbdilip@blog.slftveg.mongodb.net/';
+const MONGO_URI = 'mongodb+srv://dilip:Mongodbdilip@blog.slftveg.mongodb.net/whatsapp?retryWrites=true&w=majority';
 mongoose.connect(MONGO_URI)
   .then(() => console.log('MongoDB connected'))
   .catch(err => console.error('MongoDB connection error:', err));
